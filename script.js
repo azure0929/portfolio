@@ -1,20 +1,14 @@
 // intro text animation
 document.addEventListener("DOMContentLoaded", function () {
   const textWrapJUNYONG = document.getElementById("textWrapJUNYONG");
-  const textWrapWeb = document.getElementById("textWrapWeb");
-  const textWrapPublisher = document.getElementById("textWrapPublisher");
   const textWrapPortfolio = document.getElementById("textWrapPortfolio");
 
   const lettersJUNYONG = textWrapJUNYONG.querySelectorAll(".letter");
-  const lettersWeb = textWrapWeb.querySelectorAll(".letter");
-  const lettersPublisher = textWrapPublisher.querySelectorAll(".letter");
   const lettersPortfolio = textWrapPortfolio.querySelectorAll(".letter");
 
   animateLettersWithDelay(lettersJUNYONG, 0);
   setTimeout(() => {
-    animateLettersWithDelay(lettersWeb, 0);
-    animateLettersWithDelay(lettersPublisher, 500);
-    animateLettersWithDelay(lettersPortfolio, 1500);
+    animateLettersWithDelay(lettersPortfolio, 500);
   }, 1000);
 
   function animateLettersWithDelay(letters, delay) {
@@ -27,8 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("click", function () {
     resetAnimation(lettersJUNYONG);
-    resetAnimation(lettersWeb);
-    resetAnimation(lettersPublisher);
     resetAnimation(lettersPortfolio);
   });
 
@@ -50,8 +42,6 @@ const swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     type: "bullets",
     clickable: true,
-    dynamicBullets: true,
-    dynamicMainBullets: 1,
   },
   effect: "coverflow",
   coverflowEffect: {
