@@ -483,6 +483,11 @@ header .inner .gnb li {
   color: #57b8ff;
   height: 30px;
   background-color: rgba(87, 184, 255, 0.3);
+  transition: 0.3s;
+}
+.work .link a:last-child:hover {
+  background-color: rgba(87, 185, 255, 0.688);
+  color: #f1f1f1;
 }
 .swiper-slide img {
   border-radius: 20px;
