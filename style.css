@@ -456,8 +456,13 @@ header .inner .gnb li {
   font-weight: 700;
   margin-bottom: 100px;
 }
+.work .info {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .work .link {
-  margin-top: 8px;
   display: flex;
   gap: 10px;
   justify-content: end;
