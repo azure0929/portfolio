@@ -45,29 +45,12 @@ const swiper = new Swiper(".mySwiper", {
   },
   effect: "coverflow",
   coverflowEffect: {
-    rotate: 40,
-    depth: 100,
+    rotate: 30,
+    depth: 200,
     slideShadows: true,
   },
   mousewheel: true,
-});
-
-// gsap
-const horizontal = document.querySelector("#horizontal");
-const sections = gsap.utils.toArray("#horizontal > section");
-
-let scrollTween = gsap.to(sections, {
-  xPercent: -100 * (sections.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: horizontal,
-    start: "top top",
-    end: () => "+=" + (horizontal.offsetWidth - innerWidth),
-    pin: true,
-    ainicipatePin: 1,
-    scrub: 1,
-    invalidateOnRefresh: true,
-  },
+  keyboard: true,
 });
 
 AOS.init({
