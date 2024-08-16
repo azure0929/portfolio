@@ -39,14 +39,14 @@ a {
   width: 100%;
 }
 
-/* section : intro */
-section.intro {
-  position: relative;
-  height: 920px;
-  background: url("./images/bg.jpg") no-repeat center;
-  background-size: cover;
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
-
 header .inner {
   height: 80px;
   display: flex;
@@ -64,6 +64,14 @@ header .inner .gnb li {
 }
 header .inner .gnb li a {
   color: #191919;
+}
+
+/* section : intro */
+section.intro {
+  position: relative;
+  height: 920px;
+  background: url("../images/bg.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .title {
@@ -276,15 +284,9 @@ header .inner .gnb li a {
   justify-content: space-between;
 }
 .publishing .list .info .project ul li {
-  margin-bottom: 8px;
-}
-.publishing .list .info .project ul li:first-child {
   font-family: "Roboto";
   font-size: 36px;
   font-weight: 500;
-}
-.publishing .list .info .project ul li:last-child {
-  font-size: 22px;
 }
 .publishing .list .info .detail {
   display: flex;
