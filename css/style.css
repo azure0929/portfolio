@@ -180,9 +180,10 @@ section.intro {
   height: 100%;
   display: block;
   object-fit: cover;
+  object-fit: cover;
 }
 .about .inner .detail {
-  position: relative;
+  width: 790px;
   display: flex;
   flex-direction: column;
   justify-content: end;
