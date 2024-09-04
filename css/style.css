@@ -1,51 +1,25 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-a {
-  color: #fff;
-  text-decoration: none;
-}
 body {
   font-family: "Noto sans KR", sans-serif;
-  color: #f1f1f1;
-  background-color: #000;
-}
-
-.container {
-  position: relative;
+  color: #191919;
 }
 
 .inner {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
 a {
-  color: #f1f1f1;
   text-decoration: none;
-}
-
-/* option */
-#parallax__cont {
-  overflow: hidden;
-}
-#horizontal {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 400%;
-}
-#horizontal > section {
-  width: 100%;
 }
 
 /* Header */
 header {
   position: fixed;
   width: 100%;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.08);
+  z-index: 100;
 }
 header .inner {
   height: 80px;
@@ -62,18 +36,12 @@ header .inner .gnb li {
   display: flex;
   align-items: center;
 }
-header .inner .gnb li a {
-  color: #191919;
-}
 
 /* section : intro */
-section.intro {
+.intro {
   position: relative;
-  height: 920px;
-  background: url("../images/bg.jpg") no-repeat center;
-  background-size: cover;
+  height: 100vh;
 }
-
 .title {
   position: absolute;
   top: 50%;
@@ -81,23 +49,18 @@ section.intro {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-family: "Roboto";
-}
-.title > div:nth-of-type(2) {
-  display: flex;
 }
 .title .text-wrap {
   display: flex;
   font-weight: 700;
-  margin-right: 10px;
   letter-spacing: 0.1em;
 }
-.title > .text-wrap:nth-of-type(1) {
+.title .text-wrap:nth-of-type(1) {
   font-size: 120px;
   margin-bottom: 20px;
 }
-.title .text-wrap_bottom {
+.title .text-wrap:nth-of-type(2) {
   font-size: 30px;
 }
 .letter {
@@ -109,30 +72,22 @@ section.intro {
   opacity: 1;
   transform: translateY(0);
 }
-
 .page-scroll {
   position: absolute;
-  bottom: 12%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  float: left;
-  width: 30px;
-  height: 90px;
+  width: 40px;
   animation: page-scroll 1.2s linear infinite;
-  z-index: 1;
 }
 .page-scroll a {
+  border: 2px solid #191919;
   position: relative;
-  display: block;
   display: flex;
   justify-content: center;
-  margin: auto;
-  width: 40px;
   height: 60px;
-  font-size: 14px;
   text-align: center;
   padding-top: 5px;
-  border: 2px solid #f1f1f1;
   border-radius: 30px;
 }
 .page-scroll a span {
@@ -141,7 +96,7 @@ section.intro {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #f1f1f1;
+  background-color: #191919;
 }
 
 @keyframes page-scroll {
@@ -165,27 +120,18 @@ section.intro {
 .about .inner {
   display: flex;
   flex-direction: column;
-  gap: 70px;
-}
-.about .inner .info {
-  display: flex;
-  gap: 70px;
-}
-.about .inner .detail {
-  display: flex;
-  flex-direction: column;
   justify-content: end;
 }
-.about .inner .detail div p {
+.about .inner .info p {
   font-size: 18px;
   line-height: 1.6em;
   margin-bottom: 40px;
 }
-.about .inner .detail .detail-intro p span {
+.about .inner .info p span {
   font-weight: 500;
   color: #191919;
 }
-.about .inner .detail .detail-intro a {
+.about .inner .info a {
   display: block;
   width: 176px;
   height: 58px;
@@ -195,12 +141,12 @@ section.intro {
   border-radius: 30px;
   font-size: 18px;
   line-height: 3em;
-  background-color: #191919;
+  background-color: #797979;
   transition: 0.3s;
 }
-.about .inner .detail .detail-intro a:hover {
-  background-color: rgba(87, 185, 255, 0.6);
+.about .inner .info a:hover {
   color: #f1f1f1;
+  background-color: #191919;
 }
 
 /* section : tech */
@@ -222,7 +168,7 @@ section.intro {
   margin-bottom: 20px;
 }
 .tech .inner .detail .info li:last-child {
-  color: #57b8ff;
+  font-weight: 700;
 }
 .tech .design {
   margin-bottom: 50px;
@@ -269,19 +215,19 @@ section.intro {
 .publishing .list .info {
   width: calc(100% - 710px);
   display: flex;
+  gap: 20px;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: end;
 }
-.publishing .list .info .project ul li {
+.publishing .list .info .project h1 {
   font-family: "Roboto";
   font-size: 36px;
   font-weight: 500;
 }
 .publishing .list .info .detail {
   display: flex;
+  gap: 30px;
   flex-direction: column;
-  justify-content: space-between;
-  height: 268px;
 }
 .publishing .list .info .detail .skill ul {
   display: flex;
@@ -290,12 +236,12 @@ section.intro {
   margin-bottom: 12px;
 }
 .publishing .list .info .detail .skill ul li {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #191919;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f1f1f1;
+  color: #191919;
   height: 38px;
   padding: 0 12px;
 }

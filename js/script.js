@@ -1,15 +1,10 @@
 // intro text animation
 document.addEventListener("DOMContentLoaded", function () {
   const textWrapJUNYONG = document.getElementById("textWrapJUNYONG");
-  const textWrapPortfolio = document.getElementById("textWrapPortfolio");
 
   const lettersJUNYONG = textWrapJUNYONG.querySelectorAll(".letter");
-  const lettersPortfolio = textWrapPortfolio.querySelectorAll(".letter");
 
   animateLettersWithDelay(lettersJUNYONG, 0);
-  setTimeout(() => {
-    animateLettersWithDelay(lettersPortfolio, 500);
-  }, 1000);
 
   function animateLettersWithDelay(letters, delay) {
     letters.forEach((letter, index) => {
@@ -21,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("click", function () {
     resetAnimation(lettersJUNYONG);
-    resetAnimation(lettersPortfolio);
   });
 
   function resetAnimation(letters) {
