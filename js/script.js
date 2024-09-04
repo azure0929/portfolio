@@ -33,26 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// swiper
-const swiper = new Swiper(".mySwiper", {
-  loop: true,
-  centeredSlides: true,
-  slidesPerView: "3",
-  pagination: {
-    el: ".swiper-pagination",
-    type: "bullets",
-    clickable: true,
-  },
-  effect: "coverflow",
-  coverflowEffect: {
-    rotate: 30,
-    depth: 200,
-    slideShadows: true,
-  },
-  mousewheel: true,
-  keyboard: true,
-});
-
 AOS.init({
   duration: 1200,
 });
