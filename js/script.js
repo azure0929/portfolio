@@ -1,5 +1,5 @@
-// intro text animation
 document.addEventListener("DOMContentLoaded", function () {
+  // intro text animation
   const textWrapJUNYONG = document.getElementById("textWrapJUNYONG");
 
   const lettersJUNYONG = textWrapJUNYONG.querySelectorAll(".letter");

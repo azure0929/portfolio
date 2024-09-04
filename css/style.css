@@ -28,13 +28,9 @@ header .inner {
   align-items: center;
   box-sizing: border-box;
 }
-header .inner .gnb {
+header .inner nav {
   display: flex;
   gap: 20px;
-}
-header .inner .gnb li {
-  display: flex;
-  align-items: center;
 }
 
 /* section : intro */
