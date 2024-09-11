@@ -116,4 +116,23 @@ document.addEventListener("DOMContentLoaded", function () {
       span.classList.remove("hovered");
     });
   });
+
+  // bar 클릭 이벤트
+  const barBtn = document.querySelector(".bar");
+  const sideBar = document.querySelector(".sidebar");
+  const linkLis = document.querySelectorAll(".link li");
+
+  // bar 버튼 클릭 시 사이드바 토글
+  barBtn.addEventListener("click", function () {
+    this.classList.toggle("active");
+    sideBar.classList.toggle("active");
+  });
+
+  // 모든 링크 항목 클릭 시 active 클래스 제거
+  linkLis.forEach((li) => {
+    li.addEventListener("click", function () {
+      barBtn.classList.remove("active");
+      sideBar.classList.remove("active");
+    });
+  });
 });
