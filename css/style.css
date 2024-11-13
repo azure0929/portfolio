@@ -160,6 +160,11 @@ section.portfolio .list li:nth-of-type(3) {
   margin-top: 150px;
   padding-left: 140px;
 }
+section.portfolio .list li:nth-of-type(4) {
+  display: flex;
+  justify-content: end;
+  margin-top: 150px;
+}
 section.portfolio .list li .list-photo {
   border-radius: 6px;
   z-index: -1;
