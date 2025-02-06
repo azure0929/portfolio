@@ -1,59 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const loadingScreen = document.getElementById("loading-screen");
-  const mainContent = document.querySelector(".container");
-  const textWrapJUNYONG = document.getElementById("textWrapJUNYONG");
-  const lettersJUNYONG = textWrapJUNYONG.querySelectorAll(".letter");
   const spans = document.querySelectorAll(".about .inner .info span");
   const links = document.querySelectorAll(".link li");
-
-  // 애니메이션이 끝난 후 로딩 화면을 숨기고 메인 콘텐츠를 부드럽게 나타나도록 설정
-  setTimeout(() => {
-    // 로딩 애니메이션이 끝나면 fade-out 애니메이션 시작
-    animateLettersOut(lettersJUNYONG);
-
-    setTimeout(() => {
-      loadingScreen.style.transform = "translateY(0)";
-      setTimeout(() => {
-        loadingScreen.style.transform = "translateY(100%)";
-        mainContent.style.display = "block";
-        mainContent.style.opacity = "1";
-      }, 500); // fade-out 애니메이션이 끝난 후 1초 대기
-    }, 1000); // fade-out 애니메이션 시간
-  }, 2000); // 로딩 애니메이션의 시간
-
-  // letter - loading 텍스트 애니메이션
-  animateLettersWithDelay(lettersJUNYONG, 0);
-
-  function animateLettersWithDelay(letters, delay) {
-    letters.forEach((letter, index) => {
-      setTimeout(() => {
-        letter.classList.add("fade-in");
-      }, index * 150 + delay); // 글자마다 지연을 두어 순차적으로 나타나게 함
-    });
-  }
-
-  // leter - 각 글자가 아래로 사라지도록 애니메이션을 추가
-  function animateLettersOut(letters) {
-    letters.forEach((letter, index) => {
-      setTimeout(() => {
-        letter.classList.add("fade-out");
-      }, index * 100); // 글자마다 지연을 두어 순차적으로 사라지게 함
-    });
-  }
-
-  // letter - 문서 클릭 시 애니메이션을 리셋
-  document.addEventListener("click", function () {
-    resetAnimation(lettersJUNYONG);
-  });
-
-  // letter - 애니메이션 상태를 리셋하여 다시 실행
-  function resetAnimation(letters) {
-    letters.forEach((letter) => {
-      letter.classList.remove("fade-in", "fade-out"); // 현재 애니메이션 클래스를 제거
-      void letter.offsetWidth; // 강제 리플로우를 발생시켜 스타일 재계산을 트리거
-      letter.classList.add("fade-in"); // 애니메이션을 다시 적용
-    });
-  }
 
   // .about span - 글자 효과
   function handleScroll() {
