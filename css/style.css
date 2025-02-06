@@ -67,11 +67,11 @@ section.about {
 section.about .inner .info {
   position: absolute;
   left: 200px;
-  bottom: -900px;
+  bottom: -200px;
   max-width: 690px;
   width: 100%;
-  font-size: 50px;
-  line-height: 5rem;
+  font-size: 32px;
+  line-height: 3.4rem;
   font-weight: 500;
   color: #242424;
 }
@@ -248,13 +248,9 @@ footer .inner .profile {
 /* 반응형 */
 /* (해상도 768px ~ 1023px)*/
 @media all and (min-width: 768px) and (max-width: 1023px) {
-  /* title */
-  .title .text-wrap {
-    font-size: 60px;
-  }
   /* about */
   section.about {
-    height: 1700px;
+    height: 1400px;
   }
   section.about .inner {
     width: 100%;
@@ -263,9 +259,9 @@ footer .inner .profile {
   }
   section.about .inner .info {
     left: 24px;
-    bottom: -680px;
+    bottom: -200px;
     font-size: 36px;
-    width: 550px;
+    width: 560px;
   }
   /* portfolio */
   section.portfolio .inner {
