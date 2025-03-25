@@ -12,24 +12,24 @@ a {
 }
 /* 따라다니는 작은 원 커서 */
 .cursor-small {
+  border: 1px solid #fff;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.6);
   pointer-events: none;
   z-index: 1000;
-  transform: translate(-50%, -50%);
   transition: transform 0.1s ease-out;
-}
-
-#main-content {
-  transition: opacity 2s;
 }
 
 /* Header */
 header {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 9;
 }
@@ -58,29 +58,6 @@ header .inner nav ul li:hover a {
 }
 .sidebar {
   display: none;
-}
-
-/* section : about */
-section.about {
-  height: 2000px;
-}
-section.about .inner .info {
-  position: absolute;
-  left: 200px;
-  bottom: -200px;
-  max-width: 690px;
-  width: 100%;
-  font-size: 32px;
-  line-height: 3.4rem;
-  font-weight: 500;
-  color: #242424;
-}
-section.about .inner .info span {
-  transition: color 1s, -webkit-text-stroke 1s; /* 부드러운 색상 전환 및 stroke 제거 */
-}
-section.about .inner .info span.scrolled {
-  color: #f1f1f1;
-  -webkit-text-stroke: none;
 }
 
 /* section : portfolio */

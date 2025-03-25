@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const spans = document.querySelectorAll(".about .inner .info span");
   const links = document.querySelectorAll(".link li");
 
-  // .about span - 글자 효과
   function handleScroll() {
     const viewportHeight = window.innerHeight;
 
